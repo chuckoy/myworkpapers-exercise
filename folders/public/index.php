@@ -33,5 +33,48 @@ $app->get('/', function () use ($app) {
     $app->render('index.html');
 });
 
+// API group
+$app->group('/api', function () use ($app) {
+    // folders group
+    $app->group('/folder', function () use ($app) {
+        // GET /folder
+        $app->get('/', function () use ($app) {
+            // Return list of folders (folders.json)
+        });
+
+        // POST /folder
+        $app->post('/', function () use ($app) {
+            // Add new folder
+        });
+
+        // PUT /folder/:id
+        $app->put('/:id', function ($id) use ($app) {
+            // Edit folder name with IndexRowID = :id
+        });
+
+        // DELETE /folder/:id
+        $app->delete('/:id', function ($id) use ($app) {
+            // Delete folder with IndexRowID = :id
+        });
+    });
+    // workpapers group
+    $app->group('/workpaper', function () use ($app) {
+        // GET /workpaper
+        $app->get('/', function () use ($app) {
+            // Return list of workpapers (workpapers.json)
+        });
+
+        // POST /workpaper
+        $app->post('/', function() use ($app) {
+            // Add new workpaper
+        });
+
+        // DELETE /workpaper/:id
+        $app->delete('/:id', function ($id) use ($app) {
+            // Delete workpaper with FormRef =:id
+        });
+    });
+});
+
 // Run app
 $app->run();

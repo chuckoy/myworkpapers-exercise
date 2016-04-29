@@ -2,13 +2,11 @@
     "name": "chuck/folders",
     "description": "RESTful API for folders",
     "keywords": ["microframework","rest","router"],
-    "homepage": "",
     "license": "MIT",
     "authors": [
         {
             "name": "Chuck Logan Lim",
-            "email": "chucklogan.lim@gmail.com",
-            "homepage": ""
+            "email": "chucklogan.lim@gmail.com"
         }
     ],
     "require": {
@@ -16,7 +14,7 @@
         "monolog/monolog": "1.*",
         "slim/slim": "2.*",
         "slim/views": "0.*",
-	"slim/extras": "*",
+        "slim/extras": "*",
         "twig/twig": "1.*"
     }
 }
